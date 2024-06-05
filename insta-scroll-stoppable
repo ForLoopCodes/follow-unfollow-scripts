@@ -1,0 +1,23 @@
+let scrollInterval;
+
+function scrollToBottom() {
+  const element = document.querySelector(".yourElementClass");
+  // Scroll the element to its bottom-most point
+  element.scrollTop = element.scrollHeight;
+}
+
+function startScrolling() {
+  // Call scrollToBottom function every 5 seconds and store the interval ID
+  scrollInterval = setInterval(scrollToBottom, 5000);
+}
+
+function stopScrolling() {
+  // Clear the interval to stop scrolling
+  clearInterval(scrollInterval);
+}
+
+// Example usage:
+// To start scrolling:
+// startScrolling();
+// To stop scrolling:
+// stopScrolling();
